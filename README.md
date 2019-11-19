@@ -71,7 +71,6 @@ In this analysis, `ngram` of size 2 was used from the `NLTK` library, and `Count
 
 ![bigram_btc](Images/bigram_btc.png)            ![bigram_eth](Images/bigram_eth.png)
 
-2. List the top 10 words for each coin. 
 
 <pre>
 Bitcoin Top 10 Words    Ethereum Top 10 Words
@@ -81,7 +80,7 @@ Bitcoin Top 10 Words    Ethereum Top 10 Words
 
 ## Word Clouds
 
-Word Clouds are used to visually represent text data and the size of each word indicates its frequency. 
+Word Clouds are used to visually represent text data, the size of each word indicates its frequency. 
 
 
 ![bitcoin_cloud](Images/btc_cloud.png)
@@ -92,12 +91,22 @@ Word Clouds are used to visually represent text data and the size of each word i
 
 ## Named Entity Recognition
 
-In this section, you will build a named entity recognition model for both coins and visualize the tags using SpaCy.
+Named entity recognition models were generated for both coins and visualized using `displacy` from the `SpaCy` library. 
 
-import spacy
-from spacy import displacy
 
-SpaCy is an open-source library for advanced Natural Language Processing in Python.
+![btc_ner](Images/btc_ner.png)
 
+
+![btc_ner_list](Images/btc_ner_list.png)
+
+
+![eth_ner](Images/eth_ner.png)
+
+
+![eth_ner_list](Images/eth_ner_list.png)
+
+
+
+#### Reference
 PERSON, NORP (nationalities, religious and political groups), FAC (buildings, airports etc.), ORG (organizations), GPE (countries, cities etc.), LOC (mountain ranges, water bodies etc.), PRODUCT (products), EVENT (event names), WORK_OF_ART (books, song titles), LAW (legal document titles), LANGUAGE (named languages), DATE, TIME, PERCENT, MONEY, QUANTITY, ORDINAL and CARDINAL
 
