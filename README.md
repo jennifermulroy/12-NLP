@@ -77,7 +77,7 @@ In this analysis, `ngram` of size 2 was used from the `NLTK` library, and `Count
         Bitcoin Top 10 Words                  Ethereum Top 10 Words
 </pre>
 
-![btc_word](Images/btc_word.png)            ![eth_word](Images/eth_word.png)
+![btc_word](Images/btc_word.png)               ![eth_word](Images/eth_word.png)
 
 ## Word Clouds
 
