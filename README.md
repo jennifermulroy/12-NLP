@@ -1,6 +1,6 @@
 # Natural Language Processing Techniques
 
-In this assignment, fundamental natural language processing techniques from the `Natural Language Tool Kit (NLTK)` library were applied to the latest news articles featuring Bitcoin and Ethereum. The news was pulled from the [newsapi](https://newsapi.org/), and a number of factors were analyzed; sentiment, common words, phrases, organizations, and entities mentioned in aticles.
+In this assignment, fundamental natural language processing techniques from the `Natural Language Tool Kit (NLTK)` library were applied to the latest news articles featuring Bitcoin and Ethereum. The news was pulled from the [newsapi](https://newsapi.org/), and a number of factors were analyzed; sentiment, common words, phrases, organizations, and entities mentioned in articles.
 
 1. [News Sentiment Analysis](#News-Sentiment-Analysis)
 1. [Tokenizer](#Tokenizer)
@@ -13,7 +13,7 @@ In this assignment, fundamental natural language processing techniques from the 
 
 Sentiment analysis is a process to determine emotional tone within a text, providing insights into attitudes or opinions. For this analysis, `SentimentIntensityAnalyzer` was imported from NLTK.Sentiment.Vader library. 
 
-The API key environment variable was read in and used to create a newsapi client that fetched the news articles with `.get_everything()` using key words Bitcoin and Ethereum. There were 4321 results returned for Bitcoin and 900 for Ethereum. The title and content were extracted from each result, with a limitation of 260 characters tuncated by newsapi for each article.  Sentiment scores were generated on the content applying `sentiment = analyzer.polarity_scores(text)` and `analyzer.polarity_scores()`. The sentiment scores, titles, and text were saved to DataFrames. 
+The API key environment variable was read in and used to create a newsapi client that fetched the news articles with `.get_everything()` using key words Bitcoin and Ethereum. There were 4321 results returned for Bitcoin and 900 for Ethereum. The title and content were extracted from each result, with a limitation of 260 characters truncated by newsapi for each article.  Sentiment scores were generated on the content applying `sentiment = analyzer.polarity_scores(text)` and `analyzer.polarity_scores()`. The sentiment scores, titles, and text were saved to DataFrames. 
 
 ![btc_polarity](Images/btc_polarity.png) 
 
