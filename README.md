@@ -73,7 +73,7 @@ In this analysis, `ngram` of size 2 was used from the `NLTK` library, and `Count
 
 
 <pre>
-Bitcoin Top 10 Words    Ethereum Top 10 Words
+Bitcoin Top 10 Words             Ethereum Top 10 Words
 </pre>
 
 ![btc_word](Images/btc_word.png)               ![eth_word](Images/eth_word.png)
@@ -91,7 +91,10 @@ Word Clouds are used to visually represent text data, the size of each word indi
 
 ## Named Entity Recognition
 
-Named entity recognition models were generated for both coins and visualized using `displacy` from the `SpaCy` library. 
+
+Named entity recognition locates and classifies named entities in the text into pre-defined categories, referenced below. 
+
+A named entity recognition was generated for both coins and visualized using `displacy` from the `SpaCy` library. 
 
 
 ![btc_ner](Images/btc_ner.png)
