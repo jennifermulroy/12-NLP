@@ -74,14 +74,20 @@ In this analysis, `ngram` of size 2 was used from the `NLTK` library, and `Count
 2. List the top 10 words for each coin. 
 
 <pre>
-        Bitcoin Top 10 Words                  Ethereum Top 10 Words
+Bitcoin Top 10 Words    Ethereum Top 10 Words
 </pre>
 
 ![btc_word](Images/btc_word.png)               ![eth_word](Images/eth_word.png)
 
 ## Word Clouds
 
-In this section, you will generate word clouds for each coin to summarize the news for each coin
+Word Clouds are used to visually represent text data and the size of each word indicates its frequency. 
+
+
+![bitcoin_cloud](Images/btc_cloud.png)
+
+
+![eth_cloud](Images/eth_cloud.png)
 
 
 ## Named Entity Recognition
