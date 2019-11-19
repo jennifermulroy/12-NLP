@@ -80,7 +80,7 @@ Bitcoin Top 10 Words             Ethereum Top 10 Words
 
 ## Word Clouds
 
-Word Clouds are used to visually represent text data, the size of each word indicates its frequency. A word cloud was generated for Bitcoin and Ethereum. 
+Word Clouds are used to visually represent text data, the size of each word indicates its frequency. A word cloud was generated for Bitcoin and Ethereum using the `WordCloud` library. 
 
 
 ![bitcoin_cloud](Images/btc_cloud.png)
