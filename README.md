@@ -1,13 +1,14 @@
 ## Natural Language Processing Techniques: Bitcoin and Ethereum
 
-In this assignment, fundamental natural language processing techniques from the NLTK library were applied to the latest news articles from [newsapi](https://newsapi.org/) featuring Bitcoin and Ethereum.  A number of factors were analyzed including, sentiment, common words, phrases, organizations, and entities mentioned in aticles.  
+In this assignment, fundamental natural language processing techniques from the `Natural Language Tool Kit (NLTK)` library were applied to the latest news articles from [newsapi](https://newsapi.org/) featuring Bitcoin and Ethereum.  A number of factors were analyzed including, sentiment, common words, phrases, organizations, and entities mentioned in aticles.  
 
-1. [Sentiment Analysis](#Sentiment-Analysis)
+1. [News Sentiment Analysis](#News-Sentiment-Analysis)
+1. [Tokenizer](#Tokenizer)
 2. [Natural Language Processing](#Natural-Language-Processing)
 3. [Named Entity Recognition](#Named-Entity-Recognition)
 
 
-### News Sentiment
+### News Sentiment Analysis
 
 Sentiment analysis is a process to determine emotional tone within a text, providing insights into attitudes or opinions. For this analysis, `SentimentIntensityAnalyzer` was imported from NLTK.Sentiment.Vader library. 
 
@@ -25,19 +26,37 @@ The results were summarized `.describe()`
 </pre>
 ![btc_describe](Images/btc_describe.png)   ![eth_describe](Images/eth_describe.png)
 
-Summary of results: Bitcoin and Ethereum had similar mean positive scores, Bitcoin marginally higher. Bitcoin had the highest mean compound score, but Ethereum had the highest maximum compound score as well as the highest maximum positive score. Results overall were fairly similar with both showing low negative scores and sentiment primarily neutral. 
+Bitcoin and Ethereum had similar mean positive scores, Bitcoin marginally higher. Bitcoin had the highest mean compound score, but Ethereum had the highest maximum compound score as well as the highest maximum positive score. Results overall were fairly similar with both showing low negative scores and sentiment primarily neutral. 
 
 
 ### Tokenizer
 
-from nltk.corpus import reuters, stopwords
+Tokenization is the process of segmenting running text into words, sentences, or phrases to be used as inputs for further word or sentence processing. 
 
+Before tokenization, the content of text was cleaned to remove punctuation, non-alphabet characters, and stop words. All words were reduced to lowercase and returned in root form, a process known as lemmatization.  Stopwords are common words that are present in the text but generally do not contribute to the meaning of a sentence. The `NLTK` package provides a pre-determined list of `stopwords`. Once the text is cleaned, the words in the content of each article were tokenized with `word_tokenize`.
 
-from nltk.tokenize import word_tokenize, sent_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer, PorterStemmer
-from string import punctuation
-import re
+This process was completed by a tokenizer function: 
+<pre>
+def tokenizer(text):
+    """Tokenizes text."""
+    sw = set(stopwords.words('english'))
+    regex = re.compile("[^a-zA-Z ]")
+    re_clean = regex.sub('', text)
+    words = word_tokenize(re_clean)
+    # Lemmatize Words into root words
+    lemmatizer = WordNetLemmatizer() 
+    lem = [lemmatizer.lemmatize(word) for word in words]
+    #convert to lower and remove the stopwords 
+    tokens = [word.lower() for word in lem if word.lower() not in sw.union(sw_addon)]
+           
+    return tokens
+</pre> 
+
+The title and content of each article were tokenized and output added to the sentiment scores dataframes: 
+
+![btc_token](Images/btc_token.png)
+
+![eth_token](Images/eth_token.png)
 
 
 ### NGrams and Frequency Analysis
