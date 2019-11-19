@@ -4,7 +4,7 @@ In this assignment, fundamental natural language processing techniques from the 
 
 1. [News Sentiment Analysis](#News-Sentiment-Analysis)
 1. [Tokenizer](#Tokenizer)
-2. [N-Grams and Frequency Analysis](#NGrams-and-Frequency-Analysis)
+2. [N-Grams and Frequency Analysis](#N-Grams-and-Frequency-Analysis)
 1. [Word Clouds](#Word-Clouds)
 3. [Named Entity Recognition](#Named-Entity-Recognition)
 
