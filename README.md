@@ -17,7 +17,7 @@ The articles were pulled from the [newsapi](https://newsapi.org/) and analyzed w
 
 ## News Sentiment Analysis
 
-Sentiment analysis is a process to determine emotional tone within a text. For this analysis, `SentimentIntensityAnalyzer` was imported from NLTK.Sentiment.Vader library. 
+Sentiment analysis is a process to determine emotional tone within a text. For this analysis, `SentimentIntensityAnalyzer` was imported from `NLTK.Sentiment.Vader` library. 
 
 #### *Technical Steps*
 An API key environment variable was read into the code to create a newsapi client that fetched the news articles with `.get_everything()` using key words Bitcoin and Ethereum. There were 4321 results returned for Bitcoin and 900 for Ethereum. Only the title and content of each article was extracted and saved, noting newspai truncates the content of free articles to the first 260 characters. 
@@ -35,7 +35,7 @@ The sentiment score results were summarized `.describe()`
 </pre>
 ![btc_describe](Images/btc_describe.png)   ![eth_describe](Images/eth_describe.png)
 
-Bitcoin and Ethereum had similar mean positive scores, Bitcoin marginally higher. Bitcoin had the highest mean compound score, but Ethereum had the highest maximum compound score as well as the highest maximum positive score. Results overall were fairly similar with both showing low negative scores and sentiment primarily neutral. 
+Bitcoin and Ethereum had similar mean positive scores, Bitcoin marginally higher. Bitcoin had the highest mean compound score, but Ethereum had the highest maximum compound score as well as the highest maximum positive score. Results overall were similar with both showing low negative scores and sentiment primarily neutral. 
 
 
 ## Tokenizer
@@ -69,7 +69,7 @@ The title and content of each article were run through the tokenizer function an
 
 ## N-Grams and Frequency Analysis
 
-N-Grams and Frequency analysis were performed at the word level. N-gram is a contiguous sequence of n items from a given sequence of text or speech. Frequency counts the number of times a word is used. Both are helpful in providing insight into words and phrases commonly associated with the text.  
+N-Grams and Frequency analysis are performed at the word level. N-gram is a contiguous sequence of n items from a given sequence of text or speech. Frequency counts the number of times a word is used. Both are helpful in providing insight into words and phrases commonly associated with the text.  
 
 In this analysis, `ngram` of size 2 was used from the `NLTK` library, and `Counter` to perform Frequency analysis from the `Collections` module. 
 
@@ -118,6 +118,9 @@ A named entity recognition was generated for both coins and visualized using `di
 ![eth_ner_list](Images/eth_ner_list.png)
 
 
+## Conclusion
+
+In conclusion, the sentiment scores were neutral for Bitcoin and Ethereum. The common phrases and words associated with Bitcoin and Ethereum significantly differed. Satoshi Nakamoto, the name used for the creator of Bitcoin, was the most used for Bitcoin. And for Ethereum, blockchain and Ethereum were most commonly used together. Surprisingly, Bitcoin was used more often in Ethereum's articles than Ethereum, which may illustrate Bitcoin's dominance in the cryptocurrency space. But Ethereum had a wider variety of words including blockchain, cryptocurrency, finance, digital, and may indicate a difference in perception of Ethereum's technology verse Bitcoin that could be used as a basis for further exploration. 
 
 #### Reference
 PERSON, NORP (nationalities, religious and political groups), FAC (buildings, airports etc.), ORG (organizations), GPE (countries, cities etc.), LOC (mountain ranges, water bodies etc.), PRODUCT (products), EVENT (event names), WORK_OF_ART (books, song titles), LAW (legal document titles), LANGUAGE (named languages), DATE, TIME, PERCENT, MONEY, QUANTITY, ORDINAL and CARDINAL
