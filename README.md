@@ -4,7 +4,7 @@ In this assignment, Natural Language Processing techniques (NLP) were applied to
 
 NLP is a branch of artifical intelligence and helps to read, decipher, and understand human language by utilizing algorithms to extract meaning associated with sentences and words from a text. 
 
-The articles were pulled from the [newsapi](https://newsapi.org/) and analyzed with the Natural Language Toolkit `NLTK` library to provide more qualitative insight behind Bitcoin and Ethereum.   
+The articles were pulled from the [newsapi](https://newsapi.org/) and analyzed with the Natural Language Toolkit `NLTK` library to provide quantitative and qualitative insights behind the language associated with Bitcoin and Ethereum.   
 
 ### Overview of the Analysis
 
@@ -17,12 +17,12 @@ The articles were pulled from the [newsapi](https://newsapi.org/) and analyzed w
 
 ## News Sentiment Analysis
 
-Sentiment analysis is a process to determine emotional tone within a text to provide insights into attitudes or opinions. For this analysis, `SentimentIntensityAnalyzer` was imported from NLTK.Sentiment.Vader library. 
+Sentiment analysis is a process to determine emotional tone within a text. For this analysis, `SentimentIntensityAnalyzer` was imported from NLTK.Sentiment.Vader library. 
 
 #### *Technical Steps*
 An API key environment variable was read into the code to create a newsapi client that fetched the news articles with `.get_everything()` using key words Bitcoin and Ethereum. There were 4321 results returned for Bitcoin and 900 for Ethereum. Only the title and content of each article was extracted and saved, noting newspai truncates the content of free articles to the first 260 characters. 
 
-Sentiment scores were run on the content of each article applying `sentiment = analyzer.polarity_scores(text)` and `analyzer.polarity_scores()`. The sentiment scores, titles of articles, and text were saved to DataFrames. 
+Sentiment scores were run on the content of each article applying `sentiment = analyzer.polarity_scores(text)` and `analyzer.polarity_scores()`. The sentiment scores, titles of articles, and content were saved to DataFrames. 
 
 ![btc_polarity](Images/btc_polarity.png) 
 
