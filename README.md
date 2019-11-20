@@ -6,7 +6,7 @@ NLP is a branch of artifical intelligence and helps to read, decipher, and under
 
 The articles were pulled from the [newsapi](https://newsapi.org/) and analyzed with the Natural Language Toolkit `NLTK` library to provide quantitative and qualitative insights behind the language associated with Bitcoin and Ethereum.   
 
-### Overview of the Analysis
+### Analysis Overview
 
 1. [News Sentiment Analysis](#News-Sentiment-Analysis)
 1. [Tokenizer](#Tokenizer)
