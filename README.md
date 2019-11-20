@@ -1,6 +1,10 @@
 # Natural Language Processing Techniques
 
-In this assignment, fundamental natural language processing techniques from the `Natural Language Tool Kit (NLTK)` library were applied to the latest news articles featuring Bitcoin and Ethereum. The news was pulled from the [newsapi](https://newsapi.org/), and a number of factors were analyzed; sentiment, common words, phrases, organizations, and entities mentioned in articles.
+In this assignment, Natural Language Processing techniques (NLP) were applied to recent news articles featuring Bitcoin and Ethereum. 
+
+NLP is a branch of artifical intelligence and helps to read, decipher, and understand human language by utilizing algorithms to extract meaning associated with sentences and words from a text. 
+
+The articles were pulled from the [newsapi](https://newsapi.org/) and analyzed with the Natural Language Toolkit `NLTK` library to provide more qualitative insight behind Bitcoin and Ethereum.   
 
 1. [News Sentiment Analysis](#News-Sentiment-Analysis)
 1. [Tokenizer](#Tokenizer)
