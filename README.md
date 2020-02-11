@@ -1,6 +1,6 @@
 # Natural Language Processing Techniques
 
-Natural Language Processing techniques (NLP) were applied to recent news articles featuring Bitcoin and Ethereum. 
+Natural Language Processing techniques (NLP) applied to recent news articles featuring Bitcoin and Ethereum. 
 
 NLP is a branch of artifical intelligence and helps to read, decipher, and understand human language by utilizing algorithms to extract meaning associated with sentences and words from a text. 
 
